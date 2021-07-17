@@ -13,6 +13,7 @@ export default function App() {
 
   function hamberger(event) {
     $(".navigation-bar").slideToggle("200");
+    console.log("hi");
   }
 
   return (
