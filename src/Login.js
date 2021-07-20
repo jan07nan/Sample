@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {auth} from './firebase';
 import "./App1.css";
+import Loginimg from "./images/logimg.svg";
 
 class Login extends Component{
     constructor(props){
@@ -39,9 +40,9 @@ class Login extends Component{
     render()
     {
         return(
-            <div>
-                <form>
-                    <label>Email:
+            <div className="contant">
+            <div className="form">
+                    <label>Email:</label>
                     <input
                      type="email" 
                      id="email" 
@@ -49,7 +50,7 @@ class Login extends Component{
                      placeholder="Enter email address"
                      onChange={this.handleChange} 
                      value={this.state.email}
-                     /></label>
+                     /><br/>
                     
                     <label>Password:</label><input 
                     name="password"
@@ -57,12 +58,15 @@ class Login extends Component{
                     onChange={this.handleChange}
                     id="password" 
                     placeholder="Enter password"
-                    value={this.state.password}/>
+                    value={this.state.password}/><br/>
                     
 
                     <button onClick={this.login}>Login</button>
                     <button onClick={this.signup}>Signup</button>
-                </form>
+            </div>
+            <div className="img">
+            <img src={Loginimg} alt="" />
+            </div>
             </div>
         )
     }
