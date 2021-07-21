@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { auth, provider } from "./firebase";
+// import { auth, provider } from "./firebase";
 import img from "./images/logo.svg";
 import $ from "jquery";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
