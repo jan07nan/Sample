@@ -25,9 +25,9 @@ class App1 extends Component{
     }
     render() { 
         return ( 
-            <div className="App1">
+            <>
                  {this.state.user ? (<Home/>) : (<Login/>)}
-            </div>
+            </>
          );
     }
 }

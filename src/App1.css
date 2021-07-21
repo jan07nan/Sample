@@ -1,15 +1,14 @@
-body {
-    margin:50px 0px; padding:0px;
-    text-align:center;
-    box-align:center;
-    margin-top: 150px;
-}
+
 label{
     font-size: 20px;
     padding: 12px 12px 12px 0;
     display: inline-block;
 }
 .contant{
+    margin:50px 0px; padding:0px;
+    text-align:center;
+    box-align:center;
+    margin-top: 150px;
     display:flex;
     flex-direction: row;
 }
