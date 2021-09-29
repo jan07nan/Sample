@@ -5,6 +5,7 @@ import img from "./images/logo.svg";
 import $ from "jquery";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import App1 from "./App1";
+import About from "./about";
 export default function App() {
   // function signup() {
   //   auth.signInWithPopup(provider).then((result) => {
@@ -22,6 +23,9 @@ export default function App() {
       <Switch>
         <Route path="/login" exact>
           <App1 />
+        </Route>
+        <Route path="/about" exact>
+          <About />
         </Route>
         <Route path="/" exact>
           <header>
@@ -42,7 +46,7 @@ export default function App() {
                       <a href>Home</a>
                     </li>
                     <li>
-                      <a href>About</a>
+                      <Link to="/about" >About</Link>
                     </li>
                     <li>
                       <a href>Services</a>
