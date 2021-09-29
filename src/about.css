@@ -6,10 +6,6 @@
 }
 
 body{
-    min-height:100vh;
-    display:flex;
-    align-items: center;
-    justify-content: center;
     background-color: #f1f1f1;
 }
 .about-section{
@@ -24,7 +20,7 @@ body{
     width:55%;
     float:right;
     background-color: #fdfdfd;
-    padding:85px;
+    padding:6%;
 }
 .inner-container{
     font-size: 20px;

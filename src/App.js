@@ -42,21 +42,11 @@ export default function App() {
 
                 <div className="navigation-bar">
                   <ul>
-                    <li>
-                      <a href>Home</a>
-                    </li>
+            
                     <li>
                       <Link to="/about" >About</Link>
                     </li>
-                    <li>
-                      <a href>Services</a>
-                    </li>
-                    <li>
-                      <a href>Features</a>
-                    </li>
-                    <li>
-                      <a href>Contact</a>
-                    </li>
+                  
                     <li>
                       <Link to="/login" className="btn">
                         Login
