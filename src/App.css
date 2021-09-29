@@ -144,3 +144,23 @@ nav{
     color:#fff;
   }
 }
+
+@media (max-width:767px){
+  .container{
+    padding:0 20px;
+  }
+  .home-wrapper{
+    flex-direction:column-reverse;
+    min-height:auto;
+  }
+  .col-left h1{
+    font-size:35px;
+    margin-bottom:15px;
+  }
+  .home .home-image{
+    width: 100%;
+  }
+  .home .home-image img{
+    width:70%;
+  }
+}
