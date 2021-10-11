@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-// import { auth, provider } from "./firebase";
 import img from "./images/logo.svg";
 import $ from "jquery";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -12,7 +11,15 @@ export default function App() {
   //     console.log(result.user);
   //   });
   // }
-
+  var element = document.body;
+  function darkMode() {
+    element.className = "dark-mode";
+    
+  }
+  function lightMode() {
+    element.className = "light-mode";
+    
+  }
   function hamberger(event) {
     $(".navigation-bar").slideToggle("200");
     console.log("hi");
@@ -52,7 +59,10 @@ export default function App() {
                         Login
                       </Link>
                     </li>
+                    <button onClick={darkMode}>Darkmode</button>
+    <button onClick={lightMode}>LightMode</button>
                   </ul>
+                  
                 </div>
               </nav>
             </div>

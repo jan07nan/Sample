@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import {auth} from './firebase';
 
+
 class Home extends Component{
     constructor(props)
     {

@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import {auth} from './firebase';
-import "./App1.css";
-import Loginimg from "./images/logimg.svg";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Signup from "./Signup.js";
+import "./Signup.css";
+// import newuser from "./images/newuser.jpg";
 
 
-class Login extends Component{
+class Signup extends Component{
     constructor(props){
         super(props);
         this.login = this.login.bind(this);
@@ -20,8 +18,7 @@ class Login extends Component{
 
     login(e){
         e.preventDefault();
-        auth.signInWithEmailAndPassword(this.state.email,this.state.password)
-        .then((u)=>{
+        auth.signInWithEmailAndPassword(this.state.email,this.state.password).then((u)=>{
             console.log(u)
         }).catch((err)=>{
             console.log(err);
@@ -44,15 +41,10 @@ class Login extends Component{
     render()
     {
         return(
-            <Router>
-            <Switch>
-              <Route path="/signup" exact>
-                < Signup/>
-              </Route>
-            <div className="contant">
+            <div className="contant15">
             <div className="form">
-                <div className="log">LOGIN</div>
-                    <label>Email:</label>
+            <div className="signu"><label>SIGNUP</label></div>
+                   <div> <label>Email:</label></div>
                     <input
                      type="email" 
                      id="email" 
@@ -62,7 +54,8 @@ class Login extends Component{
                      value={this.state.email}
                      /><br/>
                     
-                    <label>Password:</label><input 
+                    <div><label>Password:</label></div>
+                    <input 
                     name="password"
                     type="password" 
                     onChange={this.handleChange}
@@ -72,18 +65,15 @@ class Login extends Component{
                     
 
                     <button onClick={this.login}>Login</button>
-                    <button onClick={this.signup}><Link to="/Signup" className="bttn">
-                        Signup
-                      </Link></button>
+                    <button onClick={this.signup}>Signup</button>
             </div>
-            <div className="img">
-            <img src={Loginimg} alt="" />
+            {/* <div className="imgg">
+             <img src={newuser} alt="" />
+             </div> */}
             </div>
-            </div>
-            </Switch>
-    </Router>
+             
         )
     }
 }
 
-export default Login;
+export default Signup;
