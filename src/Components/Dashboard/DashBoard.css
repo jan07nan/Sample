@@ -7,13 +7,19 @@
 .wholepage {
   background-color: #f1f6fb;
 }
-
+.secondpanel{
+  border: 1px solid #e7e7e7;
+      border-top: none;
+      border-bottom: none;
+}
 .titlechat{
   height: 70px;
   border-radius: 5px;
   background-color: #ffffff;
   color: #adb9c9;
-  margin:20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .abt1{
   margin-top: 3px;

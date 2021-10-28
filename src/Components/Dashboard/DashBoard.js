@@ -15,28 +15,32 @@ class DashBoard extends React.Component {
         <div className=" row m-0 wholepage">
           <RecentChat />
 
+          <div className="col-6 p-3 secondpanel">
+            <div className="titlechat">
+              <div className="d-flex">
+                <img className={recentChatStyle.im1} src={limg4} alt="" />
+                <div className="d-flex flex-column justify-content-center">
+                  <p>Janani chinnaraj</p>
+                  <p>Online</p>
+                </div>
+              </div>
 
-          <div className="col-6 p-0">
-              <div className="titlechat">
-              <img className={recentChatStyle.im1} src={limg4} alt="" />
-                  <p className="p1">Janani chinnaraj</p>
-                  <p className="abt1">Online</p>
-                  <p className="fa1"><AiOutlineCamera/></p>
-                  <p className="fa2"><FaMicrophone/></p>
-              </div>
-              <div className="bottomtext">
-                <input className="bottomtxt1" placeholder="Type your message"/>
-                <p className="fa3"><IoMdAdd/></p>
-                <p className="fa4"><FiSmile/></p>
-              </div>
-              <div className="send">
-              <p className="fa5">< FiSend/></p>
-              </div>
-          </div>
-            <div className="profile col-3 p-0">
+              <div>
+                <AiOutlineCamera className="icon" />
 
-           
+                <FaMicrophone />
+              </div>
+            </div>
+            <div className="bottomtext">
+              <input className="bottomtxt1" placeholder="Type your message" />
+              <IoMdAdd />
+              <FiSmile />
+            </div>
+            <div className="send">
+              <FiSend />{" "}
+            </div>
           </div>
+          <div className="profile col-3 p-0"></div>
         </div>
       </div>
     );

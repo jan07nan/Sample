@@ -56,9 +56,11 @@ class RecentChat extends React.Component {
           {ChatMock.map((e) => (
             <div className={styles.rl}>
               <img className={styles.im1} src={limg4} alt="" />
-              <p className={styles.p1}>{e.name}</p>
-              <p className={styles.about1}>{e.Chat}</p>
-              <p className={styles.time1}>04.15 PM</p>
+              <div className="d-flex flex-column justify-content-center">
+                <p className={styles.p}>{e.name}</p>
+                <p className={styles.about}>{e.Chat}</p>
+              </div>
+              <p className={styles.time}>04.15 PM</p>
             </div>
           ))}
         </div>
