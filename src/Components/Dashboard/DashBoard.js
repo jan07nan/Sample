@@ -8,6 +8,7 @@ import { FiSend } from "react-icons/fi";
 import limg4 from "../../images/limg1.jpg";
 import RecentChat from "./Components/Recent/RecentChat";
 import recentChatStyle from "./Components/Recent/RecentChat.module.css";
+import Simplebar from "simplebar-react";
 class DashBoard extends React.Component {
   render() {
     return (
@@ -28,16 +29,19 @@ class DashBoard extends React.Component {
               <div>
                 <AiOutlineCamera className="icon" />
 
-                <FaMicrophone />
+                <FaMicrophone className="icon" />
               </div>
             </div>
+            <Simplebar style={{ height: 480 }}>
+              
+            </Simplebar>
             <div className="bottomtext">
+              <IoMdAdd className="Add" />
               <input className="bottomtxt1" placeholder="Type your message" />
-              <IoMdAdd />
-              <FiSmile />
-            </div>
-            <div className="send">
-              <FiSend />{" "}
+              <FiSmile className="emoji" />
+              <div className="sendWrap">
+              <FiSend className="send" />
+              </div>
             </div>
           </div>
           <div className="profile col-3 p-0"></div>

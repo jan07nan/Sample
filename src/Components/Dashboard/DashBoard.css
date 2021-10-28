@@ -7,12 +7,12 @@
 .wholepage {
   background-color: #f1f6fb;
 }
-.secondpanel{
+.secondpanel {
   border: 1px solid #e7e7e7;
-      border-top: none;
-      border-bottom: none;
+  border-top: none;
+  border-bottom: none;
 }
-.titlechat{
+.titlechat {
   height: 70px;
   border-radius: 5px;
   background-color: #ffffff;
@@ -21,50 +21,46 @@
   align-items: center;
   justify-content: space-between;
 }
-.abt1{
-  margin-top: 3px;
-  margin-left: 90px;
-  color: #6A727E;
-  font-size: 15px;
-}
-.fa1{
-  margin-left: 540px;
-  font-size:30px;
-  margin-top:-40px;
-}
-.fa2{
-  margin-left: 590px;
-  font-size:20px;
-  margin-top:-35px;
+.icon {
+  margin-right: 15px;
+  font-size: 22px;
 }
 
-.bottomtxt1{
-  height: 50px;
-  width:540px;
+.bottomtext {
+  padding: 10px 20px;
   border-radius: 5px;
   background-color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+.bottomtxt1 {
+  height: 45px;
   color: #585858;
-  margin:20px;
-  margin-top:465px;
-  margin-left:60px;
+  border: none;
+  width: 80%;
 }
-.fa3{
-  margin-left: 29px;
-  margin-top: -61px;
-  font-size: 25px;
-  /* color: #adb9c9; */
+.Add {
+  font-size: 24px;
+  margin-right: 10px;
 }
-.fa4{
-  margin-left: 560px;
-  font-size: 25px;
-  margin-top: -35px;
+.sendWrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(55, 55, 148, 0.411);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
-.fa5{
-  margin-left: 610px;
-  font-size: 25px;
-  margin-top: -30px;
+.send {
+  font-size: 20px;
 }
-.profile{
+.emoji {
+  margin: 0 15px;
+  font-size: 20px;
+}
+.profile {
   height: 190px;
   border-radius: 5px;
   background-color: #ffffff;
