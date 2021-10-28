@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import {auth} from './firebase';
-import "./App1.css";
-import Loginimg from "./images/logimg.svg";
+import {auth} from '../../firebase/firebase';
+import "./Login.css";
+import Loginimg from "../../images/logimg.svg";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Signup from "./Signup.js";
+import Signup from "../Signup/Signup.js";
 
 
 class Login extends Component{

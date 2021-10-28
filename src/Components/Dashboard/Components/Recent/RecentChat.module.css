@@ -1,0 +1,161 @@
+
+  .Firstrow {
+    height: 650px;
+  }
+  .Secondrow {
+    width: 700px;
+    border-right: 1px solid #e6ecf1;
+    border-left: 1px solid #e6ecf1;
+  }
+  .Thirdrow {
+    width: 350px;
+  }
+  .chat {
+    padding: 12px;
+    font-size: 20px;
+    color: #2e3849;
+  }
+  .txtbox {
+    width:100%;
+    padding: 12px;
+    border-radius: 5px;
+    border-color: #ffffff;
+    background-color: #ffffff;
+    color: #adb9c9;
+  }
+  .searchbox{
+    position: relative;
+  }
+  .searchbox p {
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    color: #adb9c9;
+  }
+  .onlineusercontainer{
+    margin-top:15px;
+  }
+  .im1 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 10px;
+    margin-left: 20px;
+  }
+  .im2 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 10px;
+  }
+  .im3 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 10px;
+  }
+  .im4 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 10px;
+  }
+  .listname {
+    display: flex;
+    flex-direction: row;
+  }
+  .imn1 {
+    margin: 10px;
+    margin-left: 20px;
+    color: #8996a9;
+  }
+  .imn2 {
+    margin: 10px;
+    color: #8996a9;
+  }
+  .imn3 {
+    margin: 10px;
+    color: #8996a9;
+  }
+  .imn4 {
+    margin: 10px;
+    color: #8996a9;
+  }
+  .recentname {
+    margin: 16px;
+    font-size: 18px;
+    color: #2e3849;
+  }
+  
+  .rl {
+    height: 70px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    color: #adb9c9;
+    transition: transform 0.2s;
+  }
+  .rl:hover {
+    background-color: #55fdef;
+    transform: scale(1.05);
+  }
+ 
+  .recentlist {
+    height: 300px;
+    overflow-y: scroll; 
+  }
+  
+  .recentlist::-webkit-scrollbar {
+    display: none;
+  }
+    
+  .onlineUsers::-webkit-scrollbar {
+    display: none;
+  }
+  .onlineUsers{
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .recentlist {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .p1,
+  .p2,
+  .p3,
+  .p4,
+  .p5 {
+    margin-top: -60px;
+    margin-left: 90px;
+    color: #434C5B;
+    font-size: 15px;
+  }
+  .about1,
+  .about2,
+  .about3,
+  .about4,
+  .about5 {
+    margin-top: 3px;
+    margin-left: 90px;
+    color: #6A727E;
+    font-size: 15px;
+  }
+  .time1,
+  .time2,
+  .time3,
+  .time4,
+  .time5 {
+    margin-top: -42px;
+    margin-left: 230px;
+    color: #777D87;
+    font-size: 12px;
+  }
+  .onlineUsers{
+    display: flex ;
+    overflow-x: scroll; 
+}
+.onlineusercontainer{
+    text-align: center;
+}
+ 

@@ -1,0 +1,67 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto&family=Roboto+Condensed:wght@300&display=swap'); */
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: 'Roboto', sans-serif; */
+}
+.wholepage {
+  background-color: #f1f6fb;
+}
+
+.titlechat{
+  height: 70px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #adb9c9;
+  margin:20px;
+}
+.abt1{
+  margin-top: 3px;
+  margin-left: 90px;
+  color: #6A727E;
+  font-size: 15px;
+}
+.fa1{
+  margin-left: 540px;
+  font-size:30px;
+  margin-top:-40px;
+}
+.fa2{
+  margin-left: 590px;
+  font-size:20px;
+  margin-top:-35px;
+}
+
+.bottomtxt1{
+  height: 50px;
+  width:540px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #585858;
+  margin:20px;
+  margin-top:465px;
+  margin-left:60px;
+}
+.fa3{
+  margin-left: 29px;
+  margin-top: -61px;
+  font-size: 25px;
+  /* color: #adb9c9; */
+}
+.fa4{
+  margin-left: 560px;
+  font-size: 25px;
+  margin-top: -35px;
+}
+.fa5{
+  margin-left: 610px;
+  font-size: 25px;
+  margin-top: -30px;
+}
+.profile{
+  height: 190px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #adb9c9;
+  margin-top: 15px;
+}

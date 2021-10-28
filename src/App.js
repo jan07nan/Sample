@@ -3,14 +3,10 @@ import "./App.css";
 import img from "./images/logo.svg";
 import $ from "jquery";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import App1 from "./App1";
-import About from "./about";
+import LoginHelper from "./Components/LoginHelper";
+import About from "./Components/About/about";
 export default function App() {
-  // function signup() {
-  //   auth.signInWithPopup(provider).then((result) => {
-  //     console.log(result.user);
-  //   });
-  // }
+
   var element = document.body;
   function darkMode() {
     element.className = "dark-mode";
@@ -29,7 +25,7 @@ export default function App() {
     <Router>
       <Switch>
         <Route path="/login" exact>
-          <App1 />
+          <LoginHelper />
         </Route>
         <Route path="/about" exact>
           <About />

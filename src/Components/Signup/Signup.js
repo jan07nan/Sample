@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {auth} from './firebase';
+import {auth} from '../../firebase/firebase';
 import "./Signup.css";
 // import newuser from "./images/newuser.jpg";
 
@@ -12,7 +12,9 @@ class Signup extends Component{
         this.signup = this.signup.bind(this);
         this.state={
             email: "",
-            password: ""
+            password: "",
+            cpassword:"",
+            Name:""
         }
     }
 
@@ -62,6 +64,25 @@ class Signup extends Component{
                     id="password" 
                     placeholder="Enter password"
                     value={this.state.password}/><br/>
+
+                    <div><label>ConfirmPassword:</label></div>
+                    <input 
+                    name="cpassword"
+                    type="cpassword" 
+                    onChange={this.handleChange}
+                    id="cpassword" 
+                    placeholder="Enter confirm password"
+                    value={this.state.cpassword}/><br/>
+
+                    <div> <label>Name:</label></div>
+                    <input
+                     type="Name" 
+                     id="Name" 
+                     name="Name"
+                     placeholder="Enter your name"
+                     onChange={this.handleChange} 
+                     value={this.state.Name}
+                     /><br/>
                     
 
                     <button onClick={this.login}>Login</button>
