@@ -8,7 +8,7 @@ import { FaSearch } from "react-icons/fa";
 import ChatMock from "./Chatmock.json";
 let users = [
   {
-    name: "janani",
+    name: "Janani",
     img: limg4,
   },
   {
@@ -16,7 +16,7 @@ let users = [
     img: limg1,
   },
   {
-    name: "jananiNandhu",
+    name: "JananiNandhu",
     img: limg2,
   },
   {

@@ -1,0 +1,64 @@
+.profile {
+    height: 210px;
+    width:300px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #adb9c9;
+    margin:15px;
+    margin-top: 15px;
+    margin-left:20px;
+  }
+  .img1{
+    height: 90px;
+      width: 90px;
+      border-radius: 50%;  
+      margin-left:100px;
+  }
+  .penciledit{
+    font-size: 22px;
+    margin-left: 240px;
+  }
+  .name1{
+    font-weight:bold;
+    text-align: center;
+    margin:10px;
+    color:#2E3849;
+  }
+  .name2{
+    text-align: center;
+    color:#2E3849;
+  }
+  .personalinfo{
+    height: 280px;
+    width:300px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    margin:10px;
+    margin-left: -7px;
+    margin-top: 50px;
+  }
+  .all{
+    margin:25px;
+  }
+  .row11{
+    color:#2E3849;
+    margin:20px;
+  }
+  .Colm2{
+    margin-top:20px;
+  }
+  .box1{
+    display: flex;
+    justify-content: space-between;
+    margin:20px;
+    border-bottom-style:solid;
+    border-width: 1px;
+    color:#99A3B3;
+  }
+  
+  .row2{
+    margin-top:20px;
+  }
+  .ins1{
+    color:#5F6673;
+  }

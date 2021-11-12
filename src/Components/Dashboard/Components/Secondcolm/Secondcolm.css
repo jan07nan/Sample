@@ -1,0 +1,60 @@
+
+.secondpanel {
+    border: 1px solid #e7e7e7;
+    border-top: none;
+    border-bottom: none;
+  }
+  .titlechat {
+    height: 70px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #adb9c9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .icon {
+    margin-right: 15px;
+    font-size: 22px;
+  }
+  
+  .bottomtext {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+  }
+  .bottomtxt1 {
+    height: 45px;
+    color: #585858;
+    border: none;
+    width: 80%;
+  }
+  .Add {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  .sendWrap {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(55, 55, 148, 0.411);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  .send {
+    font-size: 20px;
+  }
+  .emoji {
+    margin: 0 15px;
+    font-size: 20px;
+  }
+  .im1 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 10px;
+  }
