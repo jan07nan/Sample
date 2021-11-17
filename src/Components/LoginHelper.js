@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {auth} from "../firebase/firebase";
 import Login from './Login/Login';
-import Home from './Home';
 import { withRouter } from 'react-router';
 
 class App1 extends Component{

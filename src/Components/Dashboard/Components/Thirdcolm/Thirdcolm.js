@@ -5,7 +5,7 @@ import { BiPencil } from "react-icons/bi";
 import { VscGlobe } from "react-icons/vsc";
 import { BiPhone } from "react-icons/bi";
 import { GoMail } from "react-icons/go";
-import { log } from "handlebars";
+
 
 let users = [
     {
