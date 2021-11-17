@@ -1,13 +1,29 @@
 import React from "react";
 import "./DashBoard.css";
-
+import { auth } from "../../firebase/firebase";
 import RecentChat from "./Components/Recent/RecentChat";
 import Secondcolm from "./Components/Secondcolm/Secondcolm";
 import Thirdcolm from "./Components/Thirdcolm/Thirdcolm";
-
-
+import { withRouter } from "react-router";
 
 class DashBoard extends React.Component {
+  state = {
+    user : {}
+  }
+  componentDidMount() {
+    this.authListener();
+  }
+  authListener() {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({user});
+      } else {
+        this.props.history.push({
+          pathname : "/"
+        });
+      }
+    });
+  }
   render() {
     return (
       <div>
@@ -15,10 +31,10 @@ class DashBoard extends React.Component {
           <RecentChat />
 
           <div className="col-6 p-3 secondpanel">
-           <Secondcolm />
+            <Secondcolm />
           </div>
           <div className="profile col-3 p-2">
-           <Thirdcolm />
+            <Thirdcolm user={this.state.user}/>
           </div>
         </div>
       </div>
@@ -26,6 +42,4 @@ class DashBoard extends React.Component {
   }
 }
 
-export default DashBoard;
-
-
+export default withRouter(DashBoard);

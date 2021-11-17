@@ -5,6 +5,7 @@ import { BiPencil } from "react-icons/bi";
 import { VscGlobe } from "react-icons/vsc";
 import { BiPhone } from "react-icons/bi";
 import { GoMail } from "react-icons/go";
+import { log } from "handlebars";
 
 let users = [
     {
@@ -23,11 +24,12 @@ let users = [
   ];
 
   class Thirdcolm extends React.Component {
+    
     render() {
       return (
   <div>
   <div>
-<div>   < BiPencil className="penciledit"/> <img className="img1" src={limg4} /> </div>   
+<div>   < BiPencil className="penciledit"/> <img className="img1" alt="sample" src={limg4} /> </div>   
 <div>
   <p className="name1">Janani</p>
 </div> 
@@ -61,7 +63,7 @@ let users = [
 <div className="r03">
  {users2.map((e, index) => (
   <div key={index} className="email">
-    <p>Email</p><p className="ins1">{e.email}</p> </div>
+    <p>Email</p><p className="ins1">{this.props.user.email}</p> </div>
 ))}
 </div>
 <GoMail className="row2"/>

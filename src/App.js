@@ -5,6 +5,7 @@ import $ from "jquery";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import LoginHelper from "./Components/LoginHelper";
 import About from "./Components/About/about";
+import Dashboard from "./Components/Dashboard/DashBoard";
 export default function App() {
 
   var element = document.body;
@@ -18,7 +19,6 @@ export default function App() {
   }
   function hamberger(event) {
     $(".navigation-bar").slideToggle("200");
-    console.log("hi");
   }
 
   return (
@@ -29,6 +29,9 @@ export default function App() {
         </Route>
         <Route path="/about" exact>
           <About />
+        </Route>
+        <Route path="/dashboard" exact>
+          <Dashboard />
         </Route>
         <Route path="/" exact>
           <header>

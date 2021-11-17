@@ -62,3 +62,7 @@ button{
     font-size: 15px;
     color:rgb(66, 66, 66);
 }
+.errormsg{
+    color: red;
+    font-size: 10px;
+}

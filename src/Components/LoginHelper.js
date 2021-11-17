@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {auth} from "../firebase/firebase";
 import Login from './Login/Login';
 import Home from './Home';
+import { withRouter } from 'react-router';
 
 class App1 extends Component{
         state={
@@ -16,7 +17,7 @@ class App1 extends Component{
         auth.onAuthStateChanged((user) =>{
             if(user)
             {
-                this.setState({user})
+                this.props.history.push('/dashboard')
             }
             else{
                 this.setState({user : null})
@@ -26,10 +27,10 @@ class App1 extends Component{
     render() { 
         return ( 
             <>
-                 {this.state.user ? (<Home/>) : (<Login/>)}
+                 <Login/>
             </>
          );
     }
 }
  
-export default App1;
+export default withRouter(App1);
