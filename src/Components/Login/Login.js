@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Signup from "../Signup/Signup.js";
 
 
+
 class Login extends Component{
     constructor(props){
         super(props);
@@ -55,6 +56,7 @@ class Login extends Component{
                     <label>Email:</label>
                     <input
                      type="email" 
+                     className="logininp"
                      id="email" 
                      name="email"
                      placeholder="Enter email address"
@@ -64,6 +66,7 @@ class Login extends Component{
                     
                     <label>Password:</label><input 
                     name="password"
+                    className="logininp"
                     type="password" 
                     onChange={this.handleChange}
                     id="password" 
@@ -72,7 +75,7 @@ class Login extends Component{
                     
 
                     <button onClick={this.login}>Login</button>
-                    <button onClick={this.signup}><Link to="/Signup" className="bttn">
+                    <button onClick={this.signup}><Link to="/Signup" className="bttn1" >
                         Signup
                       </Link></button>
             </div>

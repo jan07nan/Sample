@@ -19,17 +19,16 @@
     float:right;
     background-color: #fdfdfd;
     padding:6%;
-}
-.inner-container{
     font-size: 20px;
 }
+
 .inner-container h1{
     margin-bottom: 30px;
     font-size: 40px;
     font-weight:900;
 }
 
-.text{
+.text1{
     font-size: 13px;
     color:#545454;
     line-height: 30px;

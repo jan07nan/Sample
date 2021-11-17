@@ -21,5 +21,10 @@
     /* box-align:center; */
 }
 
+.bttn{
+    text-decoration: none;
+    font-size: 15px;
+    color:rgb(66, 66, 66);
+}
 
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {auth} from '../../firebase/firebase';
 import "./Signup.css";
-// import newuser from "./images/newuser.jpg";
+
 
 
 class Signup extends Component{
@@ -51,6 +51,7 @@ class Signup extends Component{
                      type="email" 
                      id="email" 
                      name="email"
+                     className="logininp"
                      placeholder="Enter email address"
                      onChange={this.handleChange} 
                      value={this.state.email}
@@ -59,7 +60,8 @@ class Signup extends Component{
                     <div><label>Password:</label></div>
                     <input 
                     name="password"
-                    type="password" 
+                    type="password"
+                    className="logininp" 
                     onChange={this.handleChange}
                     id="password" 
                     placeholder="Enter password"
@@ -69,6 +71,7 @@ class Signup extends Component{
                     <input 
                     name="cpassword"
                     type="cpassword" 
+                    className="logininp"
                     onChange={this.handleChange}
                     id="cpassword" 
                     placeholder="Enter confirm password"
@@ -78,6 +81,7 @@ class Signup extends Component{
                     <input
                      type="Name" 
                      id="Name" 
+                     className="logininp"
                      name="Name"
                      placeholder="Enter your name"
                      onChange={this.handleChange} 
@@ -85,8 +89,8 @@ class Signup extends Component{
                      /><br/>
                     
 
-                    <button onClick={this.login}>Login</button>
-                    <button onClick={this.signup}>Signup</button>
+                    <button onClick={this.login} className="bttn">Login</button>
+                    <button onClick={this.signup} className="bttn">Signup</button>
             </div>
             {/* <div className="imgg">
              <img src={newuser} alt="" />

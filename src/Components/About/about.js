@@ -8,7 +8,7 @@ class about extends Component {
 
         <div class="inner-container">
             <h1>About Us</h1>
-            <p class="text">
+            <p class="text1">
               We are commited to building the tools that helps organisation, teams and individuals stay productive and 
               connected even when they need to work apart...
 

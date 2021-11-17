@@ -34,7 +34,7 @@ export default function App() {
           <header>
             <div className="container">
               <nav className="nav d-flex">
-                <a href className="logo">
+                <a href className="clogo">
                   Chit-Chat
                 </a>
                 <div className="burger" onClick={hamberger}>
@@ -43,7 +43,7 @@ export default function App() {
                   <span></span>
                 </div>
 
-                <div className="navigation-bar">
+                <div className="navigation">
                   <ul>
             
                     <li>
@@ -55,8 +55,8 @@ export default function App() {
                         Login
                       </Link>
                     </li>
-                    <button onClick={darkMode}>Darkmode</button>
-    <button onClick={lightMode}>LightMode</button>
+                    <button onClick={darkMode} className="bttn1">Darkmode</button>
+                    <button onClick={lightMode}className="bttn1">LightMode</button>
                   </ul>
                   
                 </div>
