@@ -1,8 +1,32 @@
 import React, { Component } from "react";
-import { auth } from "../../firebase/firebase";
+import { auth, db } from "../../firebase/firebase";
 import "./Signup.css";
 import { withRouter } from "react-router-dom";
 import GetDetailFromUser from "./GetDetailFromUser";
+
+const inputs = [
+    {
+        label :"User Name",
+        name :"displayname",
+        placeholder :"Enter name"
+    },
+    {
+        label :"Country",
+        name :"Country",
+        placeholder :"Enter Country"
+    },
+    {
+        label :"Phone Number",
+        name :"phonenumber",
+        placeholder :"Enter phone number",
+        type:"tel"
+    },
+    {
+        label :"About",
+        name :"About",
+        placeholder :"About"
+    }
+]
 
 class Signup extends Component {
   constructor(props) {
@@ -13,9 +37,14 @@ class Signup extends Component {
       email: null,
       password: '',
       cpassword: null,
-      Name: null,
       error: null,
-      newUser:false
+      newUser: {
+        displayname : null,
+        Country : null,
+        phonenumber : null,
+        About:null
+      }
+
     };
   }
 
@@ -24,8 +53,11 @@ class Signup extends Component {
     if (this.state.password === this.state.cpassword) {
       auth
         .createUserWithEmailAndPassword(this.state.email, this.state.password)
-        .then((u) => {
-          console.log(u);
+        .then((e) => {
+          db.ref('users/' + e.user.uid).set({
+            uid: e.user.uid,
+            ...this.state.newUser
+          }).then(e => console.log(e)).catch(e => console.log(e))
         })
         .catch((err) => {
           console.log(err);
@@ -44,12 +76,11 @@ class Signup extends Component {
       [e.target.name]: e.target.value,
     });
   }
+  handleChangeExtra = (e, name) => this.setState({newUser : {...this.state.newUser, [name] : e}});
   render() {
     return (
       <div className="contantSignup">
         <div className="form">
-        {this.state.newUser ? <GetDetailFromUser />:
-        <>
           <div className="signu">
             <label>Signup</label>
           </div>
@@ -92,12 +123,23 @@ class Signup extends Component {
               value={this.state.cpassword}
             />
           </div>
+          {inputs.map(e => 
+            <div className="d-flex align-items-center justify-content-between">
+            <label>{e.label}</label>
+            <input
+              type={e.type | 'text'}
+              className="logininp"
+              onChange={(f) => this.handleChangeExtra(f.target.value, e.name)}
+              placeholder={e.placeholder}
+              value={this.state.newUser[e.name]}
+            />
+            </div>)}
           <br />
           {this.state.error && <p className='error'>{this.state.error}</p>}
           <button onClick={this.signup} className="bttn">
             Signup
           </button>
-        </>}
+        
         </div>
         {/* <div className="imgg">
              <img src={newuser} alt="" />

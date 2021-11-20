@@ -9,7 +9,8 @@ import { withRouter } from "react-router";
 
 class DashBoard extends React.Component {
   state = {
-    user : {}
+    user : {},
+    data : {}
   }
   componentDidMount() {
     this.authListener();
@@ -18,6 +19,10 @@ class DashBoard extends React.Component {
     auth.onAuthStateChanged((user) => {
       if (user) {
         this.setState({user});
+        db.ref('users/' + user.uid).on('value', (snapshot) => {
+          const data = snapshot.val();
+          this.setState({data});
+        })
       } else {
         this.props.history.push({
           pathname : "/"
@@ -35,7 +40,7 @@ class DashBoard extends React.Component {
             <Secondcolm />
           </div>
           <div className="profile col-3 p-2">
-            <Thirdcolm user={this.state.user}/>
+            <Thirdcolm user={this.state.user} data={this.state.data}/>
           </div>
         </div>
       </div>
