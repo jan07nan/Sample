@@ -18,7 +18,8 @@ export default function Secondcolm({user, selectedUser}) {
 
         db.ref(`message/${id}/${Object.keys(chats)[Object.keys(chats).length - 1] + 1}`).set({
           textmessage: message,
-          time: new Date().toString()
+          time: new Date().toString(),
+          people : user.uid
         })
       }
       React.useEffect(() => {
@@ -29,7 +30,8 @@ export default function Secondcolm({user, selectedUser}) {
               if(snapshot.val() === null) {
                   db.ref('message/' +user.uid + selectedUser.uid + '/0').set({
                   textmessage: `Start you chat with ${selectedUser.displayname}`,
-                  time: new Date().toString()
+                  time: new Date().toString(),
+                  people : 'Admin'
                 });
                 setid(user.uid + selectedUser.uid)
               }
@@ -65,7 +67,8 @@ export default function Secondcolm({user, selectedUser}) {
         </div>
       </div>
       <Simplebar style={{ height: '80vh' }}>
-          {Object.keys(chats).map(e => <div>
+          {Object.keys(chats).map(e => <div className={`d-flex `}>
+             
             {chats[e].textmessage}
           </div>)}
       </Simplebar>
