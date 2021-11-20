@@ -9,7 +9,7 @@ import Simplebar from "simplebar-react";
 import moment from "moment";
 import { db } from "../../../../firebase/firebase";
 
-export default function Secondcolm({user, selectedUser}) {
+export default function Secondcolm({user, selectedUser, data}) {
       const[chats, setChats] = React.useState({loading : { textmessage : "loading ..."}});
       const[id, setid] = React.useState(null);
       const[message, setMessage] = React.useState('');
@@ -21,6 +21,7 @@ export default function Secondcolm({user, selectedUser}) {
           time: new Date().toString(),
           people : user.uid
         })
+        setMessage('')
       }
       React.useEffect(() => {
         if(selectedUser !== {} && user!== {}){
@@ -66,10 +67,17 @@ export default function Secondcolm({user, selectedUser}) {
           <FaMicrophone className="icon" />
         </div>
       </div>
-      <Simplebar style={{ height: '80vh' }}>
-          {Object.keys(chats).map(e => <div className={`d-flex `}>
+      <Simplebar style={{ height: '80vh' }} className={'px-4 py-3'}>
+          {Object.keys(chats).map(e => <div className={` py-1 d-flex justify-content-${chats[e].people === user.uid ? 'end' : 'start'} `}>
              
-            {chats[e].textmessage}
+            <div className='d-flex align-items-center'>
+              {chats[e].people === selectedUser.uid && <img className={'imageInChat mr'} src={selectedUser.profileImage} alt={''} /> }
+              <div>
+              <p>{chats[e].textmessage}</p>
+              <p className='chatTime'>{moment(e.time).format('LT')}</p>
+              </div>
+              {chats[e].people === user.uid && <img className={'imageInChat ml'} src={data.profileImage} alt={''} /> }
+            </div>
           </div>)}
       </Simplebar>
       <div className="bottomtext">
