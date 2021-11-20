@@ -1,6 +1,5 @@
 import React from "react";
 import "./Thirdcolm.css";
-import limg4 from "../../../../images/limg1.jpg";
 import { BiPencil } from "react-icons/bi";
 import { VscGlobe } from "react-icons/vsc";
 import { BiPhone } from "react-icons/bi";
@@ -25,7 +24,7 @@ class Thirdcolm extends React.Component {
           <div>
             {" "}
             <BiPencil className="penciledit" />{" "}
-            <img className="img1" alt="sample" src={limg4} />{" "}
+            <img className="img1" alt="sample" src={this.props.data.profileImage} />{" "}
           </div>
           <div>
             <p className="name1">{this.props.data.displayname}</p>
