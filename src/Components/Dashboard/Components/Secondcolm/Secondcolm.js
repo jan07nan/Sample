@@ -5,7 +5,7 @@ import { FaMicrophone } from "react-icons/fa";
 import { IoMdAdd } from "react-icons/io";
 import { FiSmile } from "react-icons/fi";
 import { FiSend } from "react-icons/fi";
-import Simplebar from "simplebar-react";
+// import Simplebar from "simplebar-react";
 import moment from "moment";
 import { db } from "../../../../firebase/firebase";
 
@@ -13,7 +13,7 @@ export default function Secondcolm({user, selectedUser, data}) {
       const[chats, setChats] = React.useState({loading : { textmessage : "loading ..."}});
       const[id, setid] = React.useState(null);
       const[message, setMessage] = React.useState('');
-
+      const dummy = React.useRef(null);
       function sentMessage() {
 
         db.ref(`message/${id}/${Object.keys(chats)[Object.keys(chats).length - 1] + 1}`).set({
@@ -21,7 +21,8 @@ export default function Secondcolm({user, selectedUser, data}) {
           time: new Date().toString(),
           people : user.uid
         })
-        setMessage('')
+        setMessage('');
+        dummy.current.scrollIntoView({ behavior: 'smooth' , block: "end",});
       }
       React.useEffect(() => {
         if(selectedUser !== {} && user!== {}){
@@ -67,8 +68,8 @@ export default function Secondcolm({user, selectedUser, data}) {
           <FaMicrophone className="icon" />
         </div>
       </div>
-      <Simplebar style={{ height: '80vh' }} className={'px-4 py-3'}>
-          {Object.keys(chats).map(e => <div className={` py-1 d-flex justify-content-${chats[e].people === user.uid ? 'end' : 'start'} `}>
+      <div style={{ height: '80vh' }} className={'px-4 py-3 chatContainer'}>
+          {Object.keys(chats).map((e, index) => <div className={` py-1 d-flex justify-content-${chats[e].people === user.uid ? 'end' : 'start'} `}>
              
             <div className='d-flex align-items-center'>
               {chats[e].people === selectedUser.uid && <img className={'imageInChat mr'} src={selectedUser.profileImage} alt={''} /> }
@@ -79,7 +80,8 @@ export default function Secondcolm({user, selectedUser, data}) {
               {chats[e].people === user.uid && <img className={'imageInChat ml'} src={data.profileImage} alt={''} /> }
             </div>
           </div>)}
-      </Simplebar>
+          <span  ref={dummy}></span>
+      </div>
       <div className="bottomtext">
         <IoMdAdd className="Add" />
         <input className="bottomtxt1" value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Type your message" />
