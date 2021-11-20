@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { auth, db } from "../../firebase/firebase";
 import "./Signup.css";
 import { withRouter } from "react-router-dom";
-import GetDetailFromUser from "./GetDetailFromUser";
 
 const inputs = [
     {
@@ -42,7 +41,9 @@ class Signup extends Component {
         displayname : null,
         Country : null,
         phonenumber : null,
-        About:null
+        About:null,
+        lastseen : new Date().toString(),
+        profileImage : 'https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg'
       }
 
     };

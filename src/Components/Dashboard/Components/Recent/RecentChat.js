@@ -1,30 +1,19 @@
 import React from "react";
 import styles from "./RecentChat.module.css";
-import limg4 from "../../../../images/limg1.jpg";
-import limg1 from "../../../../images/limg2.jpeg";
-import limg2 from "../../../../images/limg3.jfif";
-import limg3 from "../../../../images/limg4.webp";
 import { FaSearch } from "react-icons/fa";
-import ChatMock from "./Chatmock.json";
-let users = [
-  {
-    name: "Janani",
-    img: limg4,
-  },
-  {
-    name: "Nandhu",
-    img: limg1,
-  },
-  {
-    name: "JananiNandhu",
-    img: limg2,
-  },
-  {
-    name: "Vikash",
-    img: limg3,
-  },
-];
+import { db } from "../../../../firebase/firebase";
+
 class RecentChat extends React.Component {
+  state = {
+    data : []
+  };
+  componentDidMount() {
+    db.ref('users').on('value', (snapshot) => {
+      const data = snapshot.val();
+      delete data[this.props.user.uid];
+      this.setState({data: Object.values(data)});
+    })
+  }
   render() {
     return (
       <div className={`col-3 p-3 ${styles.Firstrow}`}>
@@ -42,10 +31,10 @@ class RecentChat extends React.Component {
           </p>
         </div>
         <div className={styles.onlineUsers}>
-          {users.map((e, index) => (
+          {this.state.data.map((e, index) => (
             <div key={index} className={styles.onlineusercontainer}>
-              <img className={styles.im1} src={e.img} alt="" />
-              <p>{e.name}</p>
+              <img className={styles.im1} src={e?.profileImage} alt="" />
+              <p>{e.displayname}</p>
             </div>
           ))}
         </div>
@@ -53,11 +42,11 @@ class RecentChat extends React.Component {
           <p>Recent Chats</p>
         </div>
         <div className={styles.recentlist}>
-          {ChatMock.map((e) => (
+          {this.state.data.map((e) => (
             <div className={styles.rl}>
-              <img className={styles.im1} src={e.img} alt="" />
+              <img className={styles.im1} src={e.profileImage} alt="" />
               <div className="d-flex flex-column justify-content-center">
-                <p className={styles.p}>{e.name}</p>
+                <p className={styles.p}>{e.displayname}</p>
                 <p className={styles.about}>{e.Chat}</p>
               </div>
               <p className={styles.time}>04.15 PM</p>

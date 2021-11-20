@@ -7,7 +7,7 @@ import { FiSmile } from "react-icons/fi";
 import { FiSend } from "react-icons/fi";
 import limg4 from "../../../../images/limg1.jpg";
 import Simplebar from "simplebar-react";
-import { db } from "../../../../firebase/firebase";
+// import { db } from "../../../../firebase/firebase";
 
 export default function Secondcolm() {
   React.useEffect(() => {
