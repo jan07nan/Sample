@@ -5,23 +5,56 @@ import { FaMicrophone } from "react-icons/fa";
 import { IoMdAdd } from "react-icons/io";
 import { FiSmile } from "react-icons/fi";
 import { FiSend } from "react-icons/fi";
-import limg4 from "../../../../images/limg1.jpg";
 import Simplebar from "simplebar-react";
-// import { db } from "../../../../firebase/firebase";
+import moment from "moment";
+import { db } from "../../../../firebase/firebase";
 
-export default function Secondcolm() {
-  React.useEffect(() => {
-      
-    
-  }, [])
+export default function Secondcolm({user, selectedUser}) {
+      const[chats, setChats] = React.useState({loading : { textmessage : "loading ..."}});
+      const[id, setid] = React.useState(null);
+      const[message, setMessage] = React.useState('');
+
+      function sentMessage() {
+
+        db.ref(`message/${id}/${Object.keys(chats)[Object.keys(chats).length - 1] + 1}`).set({
+          textmessage: message,
+          time: new Date().toString()
+        })
+      }
+      React.useEffect(() => {
+        if(selectedUser !== {} && user!== {}){
+       db.ref('message/' + selectedUser.uid + user.uid).on('value', (snapshot) => {
+          if(snapshot.val() === null) {
+            db.ref('message/' + user.uid + selectedUser.uid).on('value', (snapshot) => {
+              if(snapshot.val() === null) {
+                  db.ref('message/' +user.uid + selectedUser.uid + '/0').set({
+                  textmessage: `Start you chat with ${selectedUser.displayname}`,
+                  time: new Date().toString()
+                });
+                setid(user.uid + selectedUser.uid)
+              }
+              else{
+                 setChats(snapshot.val());
+                 setid(user.uid + selectedUser.uid)
+                }
+            })
+          }
+          else {
+             setChats(snapshot.val());
+             setid(selectedUser.uid + user.uid)
+            }
+        })
+      }
+      },[selectedUser, user])
+   
   return (
     <div>
       <div className="titlechat">
         <div className="d-flex">
-          <img className="im1" src={limg4} alt="" />
+          <img className="im1" src={selectedUser.profileImage} alt="" />
           <div className="d-flex flex-column justify-content-center">
-            <p>Janani chinnaraj</p>
-            <p>Online</p>
+            <p>{selectedUser.displayname}</p>
+            <p>last seen {moment(selectedUser.lastseen).format('LT')}</p>
           </div>
         </div>
 
@@ -31,12 +64,16 @@ export default function Secondcolm() {
           <FaMicrophone className="icon" />
         </div>
       </div>
-      <Simplebar style={{ height: '80vh' }}></Simplebar>
+      <Simplebar style={{ height: '80vh' }}>
+          {Object.keys(chats).map(e => <div>
+            {chats[e].textmessage}
+          </div>)}
+      </Simplebar>
       <div className="bottomtext">
         <IoMdAdd className="Add" />
-        <input className="bottomtxt1" placeholder="Type your message" />
+        <input className="bottomtxt1" value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Type your message" />
         <FiSmile className="emoji" />
-        <div className="sendWrap">
+        <div className="sendWrap" onClick={sentMessage}>
           <FiSend className="send" />
         </div>
       </div>

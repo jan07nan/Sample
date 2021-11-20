@@ -10,7 +10,8 @@ import { withRouter } from "react-router";
 class DashBoard extends React.Component {
   state = {
     user : {},
-    data : {}
+    data : {},
+    selectedUser : {}
   }
   componentDidMount() {
     this.authListener();
@@ -36,11 +37,11 @@ class DashBoard extends React.Component {
   render() {
     return (
       <div>
-        <div className=" row m-0 wholepage">
-          <RecentChat user={this.state.user} handleUser={this.handleUser}/>
+        <div className=" row m-0  wholepage">
+          <RecentChat user={this.state.user} handleUser={(e) => this.setState({selectedUser : e})}/>
 
           <div className="col-6 p-3 secondpanel">
-            <Secondcolm user={this.state.user} />
+            <Secondcolm user={this.state.user} selectedUser={this.state.selectedUser} />
           </div>
           <div className="profile col-3 p-2">
             <Thirdcolm user={this.state.user} data={this.state.data}/>
