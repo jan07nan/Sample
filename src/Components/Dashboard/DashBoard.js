@@ -1,10 +1,11 @@
 import React from "react";
 import "./DashBoard.css";
-import { auth } from "../../firebase/firebase";
+import { auth, db} from "../../firebase/firebase";
 import RecentChat from "./Components/Recent/RecentChat";
 import Secondcolm from "./Components/Secondcolm/Secondcolm";
 import Thirdcolm from "./Components/Thirdcolm/Thirdcolm";
 import { withRouter } from "react-router";
+
 
 class DashBoard extends React.Component {
   state = {

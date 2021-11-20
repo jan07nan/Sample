@@ -1,19 +1,18 @@
 import firebase from "firebase";
 
 var firebaseConfig = {
-    apiKey: "AIzaSyC2AVdU-oVibS14On7SRtSyaElsLJ_P45A",
-    authDomain: "chitchat-43e86.firebaseapp.com",
-    databaseURL: "https://chitchat-43e86-default-rtdb.firebaseio.com",
-    projectId: "chitchat-43e86",
-    storageBucket: "chitchat-43e86.appspot.com",
-    messagingSenderId: "63795285939",
-    appId: "1:63795285939:web:9c135263eea96353d505c6"
+  apiKey: "AIzaSyDwUwTVZqx8ZJ2CAoy0SKBju5mCH1vAk30",
+  authDomain: "chit-chat-856db.firebaseapp.com",
+  projectId: "chit-chat-856db",
+  storageBucket: "chit-chat-856db.appspot.com",
+  messagingSenderId: "337707327855",
+  appId: "1:337707327855:web:0734c9d1a0b694a212889a"
   };
 
 
   
  export const APP = firebase.initializeApp(firebaseConfig);
-//  export const db = APP.database();       
+ export const db = APP.database();       
 
 export const auth = firebase.auth();
 export const provider = new firebase.auth.GoogleAuthProvider();

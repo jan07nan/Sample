@@ -1,6 +1,6 @@
 
 label{
-    font-size: 20px;
+    font-size: 16px;
     padding: 12px 12px 12px 0;
     display: inline-block;
 }
@@ -12,7 +12,7 @@ label{
     display:flex;
     flex-direction: row;
 }
-.form{
+.formLogin{
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
@@ -22,15 +22,15 @@ label{
 }
 
 .logininp{
-    width:400px;
-    padding: 12px 20px;
+    width:300px;
+    padding: 12px 16px;
     margin:8px 0;
     box-sizing:border-box;
     border:none;
     background-color: #55fdef;
     color:rgb(66, 66, 66);
     margin-left:16px;
-    font-size: 20px;
+    font-size: 14px;
     resize: vertical;
     border-radius: 5px;
 }

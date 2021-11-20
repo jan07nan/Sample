@@ -13,7 +13,7 @@ class Login extends Component {
     this.state = {
       email: "",
       password: "",
-      error: null
+      error: null,
     };
   }
 
@@ -31,19 +31,6 @@ class Login extends Component {
         this.setState({ error: error.message });
       });
   };
-  signup = (e) => {
-    e.preventDefault();
-    auth
-      .createUserWithEmailAndPassword(this.state.email, this.state.password)
-      .then((u) => {
-        this.props.history.push({
-          pathname: "/dashboard",
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
@@ -57,38 +44,41 @@ class Login extends Component {
             <Signup />
           </Route>
           <div className="contant">
-            <div className="form">
-              <div className="log">LOGIN</div>
-              <label>Email:</label>
-              <input
-                type="email"
-                className="logininp"
-                id="email"
-                name="email"
-                placeholder="Enter email address"
-                onChange={this.handleChange}
-                value={this.state.email}
-              />
+            <div className="formLogin">
+              <div className="log pb-4">LOGIN</div>
+              <div className="d-flex align-items-center justify-content-between">
+                <label>Email:</label>
+                <input
+                  type="email"
+                  className="logininp"
+                  id="email"
+                  name="email"
+                  placeholder="Enter email address"
+                  onChange={this.handleChange}
+                  value={this.state.email}
+                />
+              </div>
               <br />
-
-              <label>Password:</label>
-              <input
-                name="password"
-                className="logininp"
-                type="password"
-                onChange={this.handleChange}
-                id="password"
-                placeholder="Enter password"
-                value={this.state.password}
-              />
+              <div className="d-flex align-items-center justify-content-between">
+                <label>Password:</label>
+                <input
+                  name="password"
+                  className="logininp"
+                  type="password"
+                  onChange={this.handleChange}
+                  id="password"
+                  placeholder="Enter password"
+                  value={this.state.password}
+                />
+              </div>
               <br />
-                {this.state.error && <p className="errormsg">{this.state.error}</p>}
+              {this.state.error && (
+                <p className="errormsg">{this.state.error}</p>
+              )}
               <button onClick={this.login}>Login</button>
-              <button onClick={this.signup}>
-                <Link to="/Signup" className="bttn1">
-                  Signup
-                </Link>
-              </button>
+              <Link to="/Signup" className="bttn1">
+                <button>Signup</button>
+              </Link>
             </div>
             <div className="img">
               <img src={Loginimg} alt="" />

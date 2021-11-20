@@ -9,6 +9,11 @@ a{
   font-size: 30px;
 }
 
+button{
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
 .container {
   width: 100%;
   max-width: 1140px;
