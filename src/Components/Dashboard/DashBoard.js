@@ -30,11 +30,14 @@ class DashBoard extends React.Component {
       }
     });
   }
+  handleUser = (e) => {
+    console.log(e);
+  }
   render() {
     return (
       <div>
         <div className=" row m-0 wholepage">
-          <RecentChat user={this.state.user}/>
+          <RecentChat user={this.state.user} handleUser={this.handleUser}/>
 
           <div className="col-6 p-3 secondpanel">
             <Secondcolm user={this.state.user} />

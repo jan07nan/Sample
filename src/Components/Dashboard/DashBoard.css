@@ -1,9 +1,19 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto&family=Roboto+Condensed:wght@300&display=swap'); */
 * {
   margin: 0;
   padding: 0;
-  /* font-family: 'Roboto', sans-serif; */
 }
 .wholepage {
   background-color: #f1f6fb;
+}
+
+@media (orientation: landscape) {
+  .wholepage {
+    height: 100vh;
+  }
+}
+
+@media (orientation: portrait) {
+  .wholepage {
+    height: 100vh;
+  }
 }

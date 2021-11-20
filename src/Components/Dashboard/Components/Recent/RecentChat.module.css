@@ -1,7 +1,5 @@
 
-  .Firstrow {
-    height: 650px;
-  }
+
   .Secondrow {
     width: 700px;
     border-right: 1px solid #e6ecf1;
@@ -73,7 +71,8 @@
   }
  
   .recentlist {
-    height: 300px;
+    height: 65vh;
+    overflow-y: scroll;
   }
   
   .recentlist::-webkit-scrollbar {

@@ -31,7 +31,7 @@ export default function Secondcolm() {
           <FaMicrophone className="icon" />
         </div>
       </div>
-      <Simplebar style={{ height: 480 }}></Simplebar>
+      <Simplebar style={{ height: '80vh' }}></Simplebar>
       <div className="bottomtext">
         <IoMdAdd className="Add" />
         <input className="bottomtxt1" placeholder="Type your message" />
