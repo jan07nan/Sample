@@ -52,16 +52,12 @@
     margin: 0 15px;
     font-size: 20px;
   }
-  .im1 {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    margin: 10px;
-  }
+ 
   .imageInChat{
     height: 40px;
     width: 40px;
     border-radius: 50%;
+    object-fit: cover;
   }
   .mr{
     padding-right:10px ;
