@@ -3,20 +3,10 @@
   padding: 0;
 }
 .wholepage {
-  background-color: #f1f6fb;
+  background-color: var(--dashbordColor);
+  height: 100vh;
 }
 
-@media (orientation: landscape) {
-  .wholepage {
-    height: 100vh;
-  }
-}
-
-@media (orientation: portrait) {
-  .wholepage {
-    height: 100vh;
-  }
-}
 
 .tablistStyle{
 display: flex;

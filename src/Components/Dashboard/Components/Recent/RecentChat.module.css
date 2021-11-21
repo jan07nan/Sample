@@ -11,15 +11,13 @@
   .chat {
     padding: 12px;
     font-size: 20px;
-    color: #2e3849;
   }
   .txtbox {
     width:100%;
     padding: 12px;
     border-radius: 5px;
-    border-color: #ffffff;
-    background-color: #ffffff;
-    color: #adb9c9;
+    border-color: var(--background);
+    background-color: var(--background);
   }
   .searchbox{
     position: relative;
@@ -28,7 +26,6 @@
     position: absolute;
     top: 25%;
     right: 5%;
-    color: #adb9c9;
   }
   .onlineusercontainer{
     margin-top:15px;
@@ -53,15 +50,13 @@
   .recentname {
     margin: 16px;
     font-size: 18px;
-    color: #2e3849;
   }
   
   .rl {
     height: 70px;
     border-radius: 5px;
-    background-color: #ffffff;
+    background-color: var(--background);
     margin-bottom: 10px;
-    color: #adb9c9;
     transition: transform 0.2s;
     display: flex;
     position:relative;
@@ -108,7 +103,6 @@
     scrollbar-width: none; /* Firefox */
   }
   .p {
-    color: #434C5B;
     font-size: 15px;
   }
   .about{
@@ -119,7 +113,6 @@
     position:absolute;
     top: 10px;
     right: 10px;
-    color: #777D87;
     font-size: 12px;
   }
   .onlineUsers{

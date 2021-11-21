@@ -19,22 +19,20 @@ class Thirdcolm extends React.Component {
   };
   render() {
     return (
-      <div>
-        <div>
-          <div>
-            {" "}
-            <BiPencil className="penciledit" />{" "}
-            <img className="img1" alt="sample" src={this.props.data.profileImage} />{" "}
+      <div className="profile p-4">
+        <div className="pb-4">
+          <div className="editholder">
+          <BiPencil className="penciledit" />{" "}
+          <img
+            className="img1"
+            alt="sample"
+            src={this.props.data.profileImage}
+          />{" "}
           </div>
-          <div>
-            <p className="name1">{this.props.data.displayname}</p>
-          </div>
-          <div>
-            <p className="name2">{this.props.data.About}</p>
-          </div>
-          <button onClick={this.signOut}>signout</button>
+          <p className="name1">{this.props.data.displayname}</p>
+          <p className="name2">{this.props.data.About}</p>
         </div>
-        <div className="personalinfo">
+        <div>
           <div className="Colm1">
             <p className="row11">Personal Information</p>
           </div>
@@ -64,6 +62,9 @@ class Thirdcolm extends React.Component {
               </div>
             </div>
             <GoMail className="row2" />
+          </div>
+          <div className='d-flex align-items-center justify-content-center'>
+            <button className='m-0 ' onClick={this.signOut}>signout</button>
           </div>
         </div>
       </div>

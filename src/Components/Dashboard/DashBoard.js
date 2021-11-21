@@ -55,7 +55,7 @@ class DashBoard extends React.Component {
                 selectedUser={this.state.selectedUser}
               />
             </div>
-            <div className="profile col-3 p-2">
+            <div className="col-3 p-4">
               <Thirdcolm user={this.state.user} selectedUser={this.state.selectedUser} data={this.state.data} />
             </div>
           </div>

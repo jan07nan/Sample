@@ -7,16 +7,13 @@ import LoginHelper from "./Components/LoginHelper";
 import About from "./Components/About/about";
 import Dashboard from "./Components/Dashboard/DashBoard";
 export default function App() {
-
+  const [ Darkmode, setDarkmode] = React.useState(false);
   var element = document.body;
   function darkMode() {
-    element.className = "dark-mode";
-    
-  }
-  function lightMode() {
-    element.className = "light-mode";
-    
-  }
+    Darkmode ? element.classList.add('dark') :  element.classList.remove('dark');
+    setDarkmode(!Darkmode);
+    }
+
   function hamberger(event) {
     $(".navigation-bar").slideToggle("200");
   }
@@ -58,8 +55,7 @@ export default function App() {
                         Login
                       </Link>
                     </li>
-                    <button onClick={darkMode} className="bttn1">Darkmode</button>
-                    <button onClick={lightMode}className="bttn1">LightMode</button>
+                    <button onClick={darkMode} className="bttn1">{Darkmode ? "Dark Mode" : 'Light Mode'}</button>
                   </ul>
                   
                 </div>
