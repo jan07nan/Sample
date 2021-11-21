@@ -68,7 +68,7 @@ export default function Secondcolm({user, selectedUser, data}) {
           <FaMicrophone className="icon" />
         </div>
       </div>
-      <div style={{ height: '80vh' }} className={'px-4 py-3 chatContainer'}>
+      <div className={'px-4 py-3 chatContainer'}>
           {Object.keys(chats).map((e, index) => <div className={` py-1 d-flex justify-content-${chats[e].people === user.uid ? 'end' : 'start'} `}>
              
             <div className='d-flex align-items-center'>

@@ -19,7 +19,7 @@ class RecentChat extends React.Component {
   }
   render() {
     return (
-      <div className={`col-3 p-3 `}>
+      <>
         <div className={styles.chat}>
           <p>Chats</p>
         </div>
@@ -56,7 +56,7 @@ class RecentChat extends React.Component {
             </div>
           ))}
         </div>
-      </div>
+      </>
     );
   }
 }

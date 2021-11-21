@@ -75,6 +75,7 @@
   }
   .chatContainer{
     overflow-y: scroll;
+    height: 80vh;
   }
   .chatContainer::-webkit-scrollbar {
     width: 5px;
@@ -94,3 +95,9 @@
   .chatContainer::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
+  @media (orientation: portrait) {
+    .chatContainer {
+      height: 70vh;
+    }
+  }
+  

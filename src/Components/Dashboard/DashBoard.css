@@ -17,3 +17,22 @@
     height: 100vh;
   }
 }
+
+.tablistStyle{
+display: flex;
+padding: 0;
+margin: 0;
+justify-content: space-between;
+}
+.tablistStyle li{
+  list-style: none;
+  width: 33%;
+  background-color: #00c894;
+  height: 40px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.react-tabs__tab--selected{
+  background-color: #2e7260 !important;
+}
