@@ -55,7 +55,7 @@ export default function Secondcolm({user, selectedUser, data}) {
     <div>
       <div className="titlechat">
         <div className="d-flex">
-          <img className="im1" src={selectedUser.profileImage} alt="" />
+          <img className="imHeader" src={selectedUser.profileImage} alt="" />
           <div className="d-flex flex-column justify-content-center">
             <p>{selectedUser.displayname}</p>
             <p>last seen {moment(selectedUser.lastseen).format('LT')}</p>
