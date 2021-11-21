@@ -84,17 +84,17 @@
   
   /* Track */
   .chatContainer::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+    background: var(--dashboard); 
   }
    
   /* Handle */
   .chatContainer::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: var(--text); 
   }
   
   /* Handle on hover */
   .chatContainer::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: var(--background); 
   }
   @media (orientation: portrait) {
     .chatContainer {

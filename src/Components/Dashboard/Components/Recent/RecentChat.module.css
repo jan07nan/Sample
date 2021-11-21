@@ -56,40 +56,43 @@
     height: 70px;
     border-radius: 5px;
     background-color: var(--background);
-    margin-bottom: 10px;
+    margin: 10px;
     transition: transform 0.2s;
     display: flex;
     position:relative;
   }
   .rl:hover {
-    background-color: #55fdef;
+    position: relative;
+    color: var(--background);
+    background-color: var(--text);
     transform: scale(1.05);
+    z-index: 5;
   }
  
   .recentlist {
     height: 65vh;
     overflow-y: scroll;
+    overflow-x: hidden;
   }
   
   .recentlist::-webkit-scrollbar {
     width: 5px;
   }
   
-  /* Track */
+     /* Track */
   .recentlist::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+    background: var(--dashboard); 
   }
    
   /* Handle */
   .recentlist::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: var(--text); 
   }
   
   /* Handle on hover */
   .recentlist::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
-    
+    background: var(--background); 
+  } 
   .onlineUsers::-webkit-scrollbar {
     display: none;
   }
